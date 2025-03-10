@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Smart Excel to JSON Converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+<h1 class="mb-4">Smart Excel-JSON Converter</h1>
+
+<form method="POST" action="/convert" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="file" class="form-control" name="file" required>
+    </div>
+
+    <input type="hidden" name="conversionType" id="conversionType" value="">
+
+    <div class="d-grid gap-3">
+        <button type="submit" class="btn btn-primary" onclick="setConversionType('excelToJson')">
+            Excel to JSON
+        </button>
+        <button type="submit" class="btn btn-success" onclick="setConversionType('jsonToExcel')">
+            JSON to Excel
+        </button>
+    </div>
+</form>
+
+<div th:if="${error}" class="alert alert-danger mt-3" th:text="${error}"></div>
+
+<script>
+    function setConversionType(type) {
+        document.getElementById("conversionType").value = type;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+<div th:if="${json}">
+    <h1>JSON Result</h1>
+    <pre th:text="${json}"></pre>
+</div>
+
+<div th:if="${fileName}">
+    <h1>Excel File Ready</h1>
+    <a th:href="@{'/download?fileName=' + ${fileName}}"
+       class="btn btn-success"
+       th:download="${fileName}">
+        Download Excel
+    </a>
+</div>
+
+<a href="/" class="btn btn-secondary">Back</a>
+</body>
+</html>
