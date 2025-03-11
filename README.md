@@ -48,7 +48,7 @@ Import the project as a Maven project in your IDE.
 
 Run SmartExcelJsonParserApplication.java directly.
 
-This will start the server on **http://localhost:8080**.
+This will start the server on **http://localhost:3000**.
 
 ### Step 4: Access the Web UI
 1. Open a web browser and go to:
@@ -77,20 +77,11 @@ SmartExcelJsonParser/
 ## Technologies Used
 - **Backend**: Spring Boot (Java), Maven
 - **Frontend**: Thymeleaf (HTML)
-- **Libraries**: Apache POI (for Excel handling), Jackson (for JSON processing)
+- **Libraries**: Apache POI , Jackson 
 - **Build Tool**: Maven
 
 ---
 
-## Additional Notes, Assumptions, and Limitations
-- If any issues occur during execution, ensure that Java and Maven versions are correctly installed and configured.
-- The project is optimized for the provided sample Excel format. While it works with other format of sheets, but the best readable JSON results are achieved with the given structure.
-- The application is designed for simple Excel structures. Complex formatting (e.g., colors, bold text) is not retained in JSON.
 
----
 
-## Author
-**Prakhar Pandey**
-
-For any queries, please reach out via email at prakharpandey1198@gmail.com.
 
